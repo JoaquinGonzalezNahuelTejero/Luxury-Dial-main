@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e8e4db; /* Tono crema más oscuro para suavizar la transición */
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh; /* Asegura que el body ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambiamos a flex-start para evitar centrado vertical excesivo */
+    align-items: center; /* Centra horizontalmente */
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid #d4af37;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Ajustamos el margen superior del contenido para evitar solapamiento con el header fijo */
+body > *:not(header) {
+    margin-top: 100px; /* Ajustamos para que el contenido comience justo debajo del header */
+}
+
+header .logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+header h1 {
+    color: #1a1a1a;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #d4af37; /* Hover amarillo */
+}
+
+.navbar i {
+    margin-right: 8px;
+}
+
+/* Título principal (fuera del login-box) */
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    color: #1a1a1a;
+    margin-top: 0; /* Sin margen superior */
+    margin-bottom: 10px; /* Reducimos aún más el margen inferior */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px; /* Tamaño más grande para que coincida con la imagen */
+    font-weight: 600;
+}
+
+/* Contenedor del login */
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px; /* Bordes más redondeados como en la imagen */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más suave y moderna */
+    width: 100%;
+    max-width: 450px; /* Ajustamos el tamaño para que coincida con la imagen */
+}
+
+/* Título dentro del login */
+.login-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Estilos para los inputs */
+.username, input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordes más redondeados */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.username:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+}
+
+/* Placeholder */
+.username::placeholder, input[type="password"]::placeholder {
+    color: #999;
+}
+
+/* Contenedor para el input de contraseña y el botón del ojo */
+.password-container {
+    position: relative;
+    margin: 15px 0;
+}
+
+/* Inputs de usuario y contraseña */
+.username, .password-container input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    transition: opacity 0.3s ease, all 0.3s ease;
+    opacity: 1;
+}
+
+/* Asegura que el foco mantenga el estilo */
+.username:focus, .password-container input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+}
+
+/* Forzar el mismo espacio entre elementos dentro de login-box */
+.login-box > *:not(:last-child) {
+    margin-bottom: 15px !important;
+}
+
+/* Quita la animación anterior de fadeIn */
+.password-container input[type="text"],
+.password-container input[type="password"] {
+    opacity: 1;
+}
+
+/* Botón del ojo */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: -20%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.toggle-password .fas {
+    font-size: 18px; /* Tamaño ajustado para que coincida con la imagen */
+    color: #666;
+}
+
+.toggle-password:hover .fas {
+    color: #1a73e8;
+}
+
+/* Botón de ingreso */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #1557b0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #104080;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    margin-top: auto; /* Empuja el footer al final de la página */
+    padding: 20px;
+    text-align: center;
+    color: #d4af37;
+    font-size: 14px;
+    width: 100%;
+    background: #1a1a1a;
+    border-top: 3px solid #d4af37;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .login-box h2 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles/style3.css">
+    <title>Carrito - Luxury Dial</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
+                <h1>Luxury Dial</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="/about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                    <li><a href="#products"><i class="fas fa-clock"></i> Relojes</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-count">0</span></a></li>
+                    <li><a href="/login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor para la notificación -->
+    <div id="notifications" class="notifications"></div>
+
+    <section id="cart" class="cart">
+        <div class="cart-header">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Carrito de Compras</h2>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart">El carrito se encuentra vacío</p>
+        </div>
+        <div class="cart-summary">
+            <h3>Resumen de tu Compra</h3>
+            <div class="summary-details">
+                <p>Subtotal: <span id="subtotal">$0.00 USD</span></p>
+                <p>Envío: <span id="shipping">$10.00 USD</span></p>
+                <p class="total">Total: <span id="total">$0.00 USD</span></p>
+            </div>
+            <button id="checkout" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Luxury Dial. Todos los derechos reservados.</p>
+    </footer>
+
+    <script defer src="carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Relojes</title>
+    <link rel="stylesheet" href="styles/style5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
+        <h1>Luxury Dial</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="/about.html"><i class="fas fa-info-circle"></i>Sobre Nosotros</a></li>
+                <li><a href="#products"><i class="fas fa-clock"></i>Relojes</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contacto</a></li>
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-count">0</span></a></li>
+                <li><a href="/login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i>Registrarse</a></li>
+                <li><a href="/buscar.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor para la notificación -->
+    <div id="notifications" class="notifications"></div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar relojes..." id="search-input">
+    </div>
+    
+    <main>
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-section">
+                <h3>Precio</h3>
+                <input type="range" min="0" max="250000" value="250000" id="price-filter">
+                <span id="price-value">Hasta U$S 250,000</span>
+            </div>
+            <div class="filter-section">
+                <h3>Color</h3>
+                <label><input type="checkbox" class="checkbox" value="negro"> Negro</label>
+                <label><input type="checkbox" class="checkbox" value="plata"> Plata</label>
+                <label><input type="checkbox" class="checkbox" value="oro"> Oro</label>
+                <label><input type="checkbox" class="checkbox" value="azul"> Azul</label>
+                <label><input type="checkbox" class="checkbox" value="verde"> Verde</label>
+            </div>
+        </aside>
+    
+        <section class="watch-grid">
+            <div class="watch-card" data-price="55120" data-color="azul">
+                <img src="imagen/azul-claro.webp" alt="Aqua Eternal">
+                <h3>Aqua Eternal</h3>
+                <p>U$S 55,120</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 1')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="82300" data-color="azul">
+                <img src="imagen/azul-marino.webp" alt="Celestial Vanguard">
+                <h3>Celestial Vanguard</h3>
+                <p>U$S 82,300</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 2')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="120450" data-color="azul">
+                <img src="imagen/azul-oscuro.webp" alt="Marine Sovereign">
+                <h3>Marine Sovereign</h3>
+                <p>U$S 120,450</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 3')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="65600" data-color="azul">
+                <img src="imagen/azul-verde.webp" alt="Turquoise Dynamic">
+                <h3>Turquoise Dynamic</h3>
+                <p>U$S 65,600</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 4')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="28350" data-color="azul">
+                <img src="imagen/azul.aquamarino.webp" alt="Azure Serene">
+                <h3>Azure Serene</h3>
+                <p>U$S 28,350</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 5')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="32870" data-color="azul">
+                <img src="imagen/azul.webp" alt="Indigo Regal">
+                <h3>Indigo Regal</h3>
+                <p>U$S 32,870</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 6')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="40250" data-color="negro">
+                <img src="imagen/batmanpng.webp" alt="Onyx Imperial">
+                <h3>Onyx Imperial</h3>
+                <p>U$S 40,250</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 7')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="21330" data-color="plata">
+                <img src="imagen/blanco.webp" alt="Pearl Urban">
+                <h3>Pearl Urban</h3>
+                <p>U$S 21,330</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 8')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="233470" data-color="plata">
+                <img src="imagen/diamantes.webp" alt="Diamond Pure">
+                <h3>Diamond Pure</h3>
+                <p>U$S 233,470</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 9')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="110710" data-color="oro">
+                <img src="imagen/dorado-clasico.webp" alt="Aureum Minimal">
+                <h3>Aureum Minimal</h3>
+                <p>U$S 110,710</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 10')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="250000" data-color="oro">
+                <img src="imagen/dorado.webp" alt="Golden Celestial">
+                <h3>Golden Celestial</h3>
+                <p>U$S 250,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 11')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="165000" data-color="oro">
+                <img src="imagen/dorado2.webp" alt="Aurum Nautical">
+                <h3>Aurum Nautical</h3>
+                <p>U$S 165,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 12')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="135000" data-color="oro">
+                <img src="imagen/dorado3.webp" alt="Golden Essence">
+                <h3>Golden Essence</h3>
+                <p>U$S 135,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 13')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="13500" data-color="negro">
+                <img src="imagen/negro.webp" alt="Ebony Silver">
+                <h3>Ebony Silver</h3>
+                <p>U$S 13,500</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 14')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="210860" data-color="negro">
+                <img src="imagen/negro2.webp" alt="Shadow Exclusive">
+                <h3>Shadow Exclusive</h3>
+                <p>U$S 210,860</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 15')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="120170" data-color="plata">
+                <img src="imagen/plata.webp" alt="Platinum Vibrant">
+                <h3>Platinum Vibrant</h3>
+                <p>U$S 120,170</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 16')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="48000" data-color="negro">
+                <img src="imagen/rojo.webp" alt="Obsidian Nocturne">
+                <h3>Obsidian Nocturne</h3>
+                <p>U$S 48,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 17')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="85000" data-color="verde">
+                <img src="imagen/verde.webp" alt="Emerald Radiant">
+                <h3>Emerald Radiant</h3>
+                <p>U$S 85,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 18')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="175000" data-color="verde">
+                <img src="imagen/verde2 (1).webp" alt="Verdant Gala">
+                <h3>Verdant Gala</h3>
+                <p>U$S 175,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 19')">Añadir al carrito</button>
+            </div>
+            <div class="watch-card" data-price="100000" data-color="verde">
+                <img src="imagen/verde2.webp" alt="Jade Marine">
+                <h3>Jade Marine</h3>
+                <p>U$S 100,000</p>
+                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 20')">Añadir al carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="buscador.js"></script>
+    <script src="carrito.js"></script>
+</body>
+</html>
