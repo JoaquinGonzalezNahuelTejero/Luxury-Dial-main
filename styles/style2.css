@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
+body{ 
+    font-family: 'Montserrat', sans-serif; 
     background-color: #e8e4db; /* Tono crema más oscuro para suavizar la transición */
     color: #333;
     line-height: 1.5;
@@ -15,8 +16,9 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Cambiamos a flex-start para evitar centrado vertical excesivo */
     align-items: center; /* Centra horizontalmente */
+    background-image: url(/imagen/Fondo-login.jpg);
+    background-size: cover;
 }
-
 /* Header */
 header {
     background-color: #fff;
@@ -25,7 +27,7 @@ header {
     border-bottom: 2px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    position: fixed;
+    position: flex;
     top: 0;
     left: 0;
     z-index: 10;
@@ -80,165 +82,195 @@ h1 {
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-
-h3 {
-    color: #1a1a1a;
-    margin-top: 0; /* Sin margen superior */
-    margin-bottom: 10px; /* Reducimos aún más el margen inferior */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px; /* Tamaño más grande para que coincida con la imagen */
-    font-weight: 600;
+.container-form{
+    max-width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0px #0007;
+    transition: all 1s ease;
+    margin: 30px;
+    overflow: hidden;
+    position: absolute;
+    top:20%;
 }
-
-/* Contenedor del login */
-.login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px; /* Bordes más redondeados como en la imagen */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más suave y moderna */
-    width: 100%;
-    max-width: 450px; /* Ajustamos el tamaño para que coincida con la imagen */
-}
-
-/* Título dentro del login */
-.login-box h2 {
+.information{
+    width: 40%;
+    display: flex;
+    align-items: center;
     text-align: center;
-    color: #333;
-    margin-bottom: 25px;
-    font-size: 24px;
-    font-weight: 600;
+    background-color: #333e;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
-
-/* Estilos para los inputs */
-.username, input[type="password"] {
+.info-childs{
     width: 100%;
-    padding: 12px 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Bordes más redondeados */
-    box-sizing: border-box;
-    font-size: 16px;
+    padding: 0 30px;
 }
-
-.username:focus, input[type="password"]:focus {
+.info-childs h2{
+    font-size: 25px;
+}
+.info-childs p{
+    margin: 15px 0;
+    color: #eee;
+}
+.info-childs input{
+    background-color: transparent;
+    color: #eee;
+    padding: 10px 20px;
+    border-radius: 20px;
     outline: none;
-    border-color: #1a73e8;
-    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    margin-bottom: 10px;
 }
-
-/* Placeholder */
-.username::placeholder, input[type="password"]::placeholder {
-    color: #999;
+.info-childs input:hover{
+    background-color: #0007;
 }
-
-/* Contenedor para el input de contraseña y el botón del ojo */
-.password-container {
-    position: relative;
+.form-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #fffa;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.form-information-childs{
+    padding: 0 30px;
+}
+.form-information-childs h2{
+    color: #333;
+    font-size: 2rem;
+}
+.form-information-childs p{
+    color: #555;
+}
+.icon{
     margin: 15px 0;
 }
-
-/* Inputs de usuario y contraseña */
-.username, .password-container input {
-    width: 100%;
-    padding: 12px 40px 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-    margin: 0;
-    transition: opacity 0.3s ease, all 0.3s ease;
-    opacity: 1;
-}
-
-/* Asegura que el foco mantenga el estilo */
-.username:focus, .password-container input:focus {
-    outline: none;
-    border-color: #1a73e8;
-    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
-}
-
-/* Forzar el mismo espacio entre elementos dentro de login-box */
-.login-box > *:not(:last-child) {
-    margin-bottom: 15px !important;
-}
-
-/* Quita la animación anterior de fadeIn */
-.password-container input[type="text"],
-.password-container input[type="password"] {
-    opacity: 1;
-}
-
-/* Botón del ojo */
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: -20%;
-    background: none;
-    border: none;
+.icon i{
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 #000;
+    padding: 5px;
     cursor: pointer;
-    padding: 0;
-    width: 24px;
-    height: 24px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
 }
-
-.toggle-password .fas {
-    font-size: 18px; /* Tamaño ajustado para que coincida con la imagen */
-    color: #666;
-}
-
-.toggle-password:hover .fas {
-    color: #1a73e8;
-}
-
-/* Botón de ingreso */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 8px; /* Bordes más redondeados */
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #1557b0;
+.icon i:hover{
+    background-color: #0003;
     transform: translateY(-2px);
 }
-
-button:active {
-    background-color: #104080;
-    transform: translateY(0);
+.form{
+    margin: 20px 0 0 0;
 }
-
-/* Footer */
-footer {
-    margin-top: auto; /* Empuja el footer al final de la página */
-    padding: 20px;
-    text-align: center;
-    color: #d4af37;
-    font-size: 14px;
+.form label{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    box-shadow: 0 2px 5px #0007;
+}
+.form label input{
     width: 100%;
-    background: #1a1a1a;
-    border-top: 3px solid #d4af37;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color:#333;
+}
+.form label i{
+    color: #333;
+}
+.form input[type = "submit"]{
+    background-color: transparent;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    margin-top: 5px;
+}
+.form input[type = "submit"]:hover{
+    background-color: #333;
+    color: #fff;
+}
+.hide{
+    position: absolute;
+    transform: translateY(-300%);
+    
+}
+/*Mensajes de alerta*/
+.form div .alerta{
+    width: 300px;
+    text-align: left;
+    border-radius: 10px;
+    margin: 5px 0px 5px 0px;
+    font-size: 13px;
+}
+.form .alerta-error{
+    display: block;
+    background-color: #F00a;
+    color: #fff;
+    box-shadow: 0 0 5px 0 #0007;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.form .alerta-exito{
+    display: block;
+    background-color: #0f05;
+    color:#fff;
+    box-shadow: 0 0 5px 0 #0007;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.form .error{
+    outline: solid 2px #9d2222;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .login-box {
-        padding: 30px;
-        max-width: 90%;
+.form > .alerta-error, 
+.form > .alerta-exito{
+    display: none;
+}
+/*Responsive*/
+@media screen and (max-width:750px){
+    html{
+        font-size: 12px;
     }
-
-    h3 {
-        font-size: 24px;
+}
+@media screen and (max-width:580px){
+    html{
+        font-size: 15px;
     }
+    .container-form{
+        flex-direction: column;
+        height: auto;
+    }
+    .information{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .form-information{
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
 
-    .login-box h2 {
-        font-size: 20px;
     }
 }

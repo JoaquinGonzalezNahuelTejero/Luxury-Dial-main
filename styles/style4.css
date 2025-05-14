@@ -4,9 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: 'Montserrant' sans-serif;
+    font-family: 'Montserrat', sans-serif ;
     background-color: #f4f1ea; /* Tono crema más suave */
     color: #333;
     line-height: 1.6;
@@ -162,24 +161,24 @@ header h1 {
 }
 
 .box-2 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Brad_Pilardo.jpg);
 }
 
 .box-3 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Armando_Paredes.avif);
 }
 
 .box-4 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Ignacio_Lara.jpg);
 }
 .box-5 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Juan\ Perez.png);
 }
 .box-6 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Lucas_Montes.avif);
 }
 .box-7 {
-    background-image: url(../imagen/JoaquinG.png);
+    background-image: url(../imagen/Rogelio_Navarro.jpg);
 }
 
 .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover  {
@@ -187,45 +186,44 @@ header h1 {
 }
 
 /* Información de creadores */
-.box-info {
+#box-info {
     list-style: none;
     color: #333;
 }
 
-.box-info li {
+#box-info li {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.box-info li:first-child {
+#box-info li:first-child {
     font-weight: 600;
     font-size: 1.2rem;
     color: #1a1a1a;
 }
 
-.box-info p {
+#box-info p {
     font-size: 0.9rem;
     color: #555;
 }
 
 /* Iconos de redes sociales */
-.box-info a {
+#box-info a {
     display: inline-block;
     margin-right: 0.75rem;
     margin-top: 0.5rem;
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.box-info .fa-facebook {
+#box-info .fa-facebook {
     color: #3b5998;
 }
 
-.box-info .fa-instagram {
+#box-info .fa-instagram {
     color: #e1306c;
 }
 
-.box-info a:hover {
+#box-info a:hover {
     transform: scale(1.2);
 }
 
@@ -251,11 +249,15 @@ header h1 {
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: #fff;
+    background: linear-gradient(180deg, #1a1a1a, #2b2b2b);
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    color: #d4af37;
+    font-size: 15px;
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    bottom: 0px;
+    position: relative;
     width: 100%;
 }
 

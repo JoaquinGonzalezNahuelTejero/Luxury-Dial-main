@@ -287,12 +287,15 @@ header h1 {
 /* Footer */
 footer {
     background: linear-gradient(180deg, #1a1a1a, #2b2b2b);
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     color: #d4af37;
     font-size: 15px;
     border-top: 4px solid #d4af37;
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 /* Notificaciones */

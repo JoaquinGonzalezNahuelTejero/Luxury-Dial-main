@@ -22,7 +22,7 @@ const products = {
     "Reloj 17": { name: "Obsidian Nocturne", price: 48000, image: "imagen/rojo.webp" },
     "Reloj 18": { name: "Emerald Radiant", price: 85000, image: "imagen/verde.webp" },
     "Reloj 19": { name: "Verdant Gala", price: 175000, image: "imagen/verde2 (1).webp" },
-    "Reloj 20": { name: "Jade Marine", price: 100000, image: "imagen/verde2.webp" },
+    "Reloj 20": { name: "Jade Marine", price: 200000, image: "imagen/verde2.webp" },
 };
 
 // Función para mostrar notificación

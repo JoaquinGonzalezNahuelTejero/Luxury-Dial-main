@@ -3,38 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="styles/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagen/penes solo.png">
+    <title>Luxury Dial</title>
 </head>
     <header>
         <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
         <h1>Luxury Dial</h1>
         <nav class="navbar">
             <ul>
-                <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li> <!-- Corregido el doble <i> -->
-                <li><a href="/about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
-                <li><a href="#products"><i class="fas fa-clock"></i> Relojes</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li> <!-- Corregido el doble <i> -->
+                <li><a href="/about.html"><i class="fas fa-info-circle"></i>Sobre Nosotros</a></li>
+                <li><a href="#products"><i class="fas fa-clock"></i>Relojes</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contacto</a></li>
                 <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li> <!-- Corregido el href duplicado -->
-                <li><a href="/login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                <li><a href="/login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i>Iniciar sesion</a></li>
             </ul>
         </nav>
     </header>
-    <h3>aaaaaaaaaa</h3>
-    <div class="login-box" id="login-box">
-        <h2>Login</h2>
-        <input class="username" type="text" id="username" placeholder="Usuario">
-        <div class="password-container">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
-                <i class="fas fa-eye"></i>
-            </button>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2 title="Bienvenido" aria-label="Bienvenido">Bienvenido</h2>
+                <p>Para poder realizar compras en la pagina tienes que Iniciar sesion.</p>
+                <input type="button" value="Iniciar sesion" id="sign-in">
+            </div>
         </div>
-        <button onclick="login()">Ingresar</button>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2 title="Crear una cuenta" aria-label="Crear tu cuenta">Crear una Cuenta</h2>
+                <div class="icon">
+                    <i class="fa-brands fa-google" title="google" aria-label="google"></i>
+                    <i class="fa-brands fa-facebook" title="facebook" aria-label="facebook"></i>
+                </div>
+                <p aria-label="Pudes usar tu email">o puedes usar tu email para el registro.</p>
+                <form class="form form-register" novalidate>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Nombre Usuario" title="Nombre usuario" aria-label="Nombre usuario" name="userName" >
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email" title="Email" aria-label="Email" name="userEmail">
+                        </label>
+                        <div></div>
+                    </div>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Contraseña" title="Contraseña" aria-label="Contraseña" name="userPassword">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" placeholder="Numero de Telefono"
+                            title="Numero de Telefono" aria-label="Numero de Telefono" name="userTel">
+                        </label>
+                    </div>
+                    <input type="submit" value="Registrarse">
+                    <div class="alerta-error">Tienes que llenar los campos</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2 title="Hola de nuevo" aria-label="Hola de nuevo">¡¡Hola de nuevo!!</h2>
+                <p>Puedes registrarte para crear una nueva cuenta.</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2 title="Iniciar sesion" aria-label="Iniciar sesion">Iniciar sesion</h2>
+                <div class="icon">
+                    <i class="fa-brands fa-google" title="google" aria-label="google"></i>
+                    <i class="fa-brands fa-facebook" title="facebook" aria-label="facebook"></i>
+                </div>
+                <p aria-label="Pudes usar tu email"> o iniciar sesion con una cuenta.</p>
+                <form class="form form-login" novalidate>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email" title="Email" aria-label="Email" name="userEmail">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Contraseña" title="Contraseña" aria-label="Contraseña" name="userPassword">
+                        </label>
+                    </div>
+                    <input type="submit" value="Iniciar sesion" aria-label="Click para iniciar sesion" title="Iniciar sesion">
+                    <div class="alerta-error">Tienes que llenar los campos</div>
+                    <div class="alerta-exito">Inicio de sesion correcto</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script2.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

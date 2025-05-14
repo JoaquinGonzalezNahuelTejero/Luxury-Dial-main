@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style4.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Sobre Nosotros - Luxury Dial</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
-                <li><a href="#products"><i class="fas fa-clock"></i> Relojes</a></li>
+                <li><a href="/buscar.html"><i class="fas fa-clock"></i> Relojes</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
                 <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-count">0</span></a></li>
                 <li><a href="login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i> Registrarse</a></li>
@@ -32,7 +35,7 @@
         </div>
         <div class="content-1">
             <div class="box-1"></div>
-            <ul class="box-info">
+            <ul id="box-info">
                 <li>Joaquin Gonzalez</li>
                 <li>Estudiante de programación</li>
                 <li>Redes Sociales</li>
@@ -42,50 +45,62 @@
         </div>
         <div class="content-2">
             <div class="box-2"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Brad Pilardo</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
         <div class="content-3">
             <div class="box-3"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Armando Paredes</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
         <div class="content-4">
             <div class="box-4"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Ignacio Lara</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
         <div class="content-5">
             <div class="box-5"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Juan Perez</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
         <div class="content-6">
             <div class="box-6"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Lucas Montes</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
         <div class="content-7">
             <div class="box-7"></div>
-            <ul class="box-info">
-                <li>Nombre</li>
-                <li>Apellido</li>
-                <p>Información</p>
+            <ul id="box-info">
+                <li>Rogelio Navarro</li>
+                <li>Estudiante de programacion</li>
+                <li>Redes sociales</li>
+                <a title="Enlace de Facebook" href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a title="Enlace de Instagram" href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </ul>
         </div>
     </section>
@@ -94,5 +109,6 @@
     </footer>
     <script src="script.js"></script>
     <script src="carrito.js"></script>
+    <script src="db/ecomers.db"></script>
 </body>
 </html>
