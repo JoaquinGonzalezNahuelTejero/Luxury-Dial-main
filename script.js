@@ -101,3 +101,8 @@ fetch('products.json')
         }
     })
     .catch(error => console.error('Error loading product:', error));
+
+    function toggleMenu() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("active");
+      }
