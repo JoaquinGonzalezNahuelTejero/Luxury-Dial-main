@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background-color: #fff;
+    background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
     border-bottom: 2px solid #d4af37;
@@ -385,5 +385,19 @@ footer {
 
     .characteristics dl {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width:420px){
+    .navbar{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fffd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
     }
 }

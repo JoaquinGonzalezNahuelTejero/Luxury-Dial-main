@@ -14,12 +14,13 @@ body {
 
 /* Header */
 header {
-    background-color: #fff;
+    background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 0 20px 0 #0007;
+    box-shadow: 0 0 20px 0px #0007;
+
 }
 
 header .logo {
@@ -494,5 +495,19 @@ footer {
         max-width: 100%;
         gap: 15px;
         padding: 15px 20px;
+    }
+}
+@media (max-width:420px){
+    .navbar{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fffd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
     }
 }
