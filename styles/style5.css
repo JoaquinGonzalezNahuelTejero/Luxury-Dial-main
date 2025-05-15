@@ -456,9 +456,10 @@ main {
 
 
 /* Responsive */
-@media (max-width: 768px) {
 
-.menu-toggle {
+@media (max-width: 875px) {
+
+     .menu-toggle {
         display: block;
     }
 
@@ -466,11 +467,25 @@ main {
         display: none;
         position: absolute;
         left: 0;
-        width: 35%;
-        background-color: rgba(255, 255, 255, 0.7);
+        width: 40%;
         padding: 20px;
+        background-color: #fffd;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
     }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
 
     main {
         flex-direction: column;
@@ -484,14 +499,6 @@ main {
 
     .watch-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        flex-wrap: wrap;
-        gap: 1rem;
     }
 
     .filter-section h3 {

@@ -190,8 +190,44 @@ footer {
     width: 100%;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 875px) {
+
+         .menu-toggle {
+        display: block;
+    }
+
+   .navbar {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 40%;
+        padding: 20px;
+        background-color: #fffd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
     .about-content {
         padding: 1rem;
         margin: 1rem;
@@ -214,9 +250,6 @@ footer {
         margin-bottom: 1rem;
     }
 
-    .navbar ul {
-        gap: 1rem;
-    }
 }
 
 @media (max-width: 480px) {

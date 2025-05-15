@@ -76,6 +76,31 @@ header h1 {
     margin-right: 8px;
 }
 
+#cart-count {
+    background-color: #d4af37;
+    color: #fff;
+    font-size: 12px; /* Reducido para mejor ajuste en el círculo */
+    font-weight: 600;
+    width: 30px; /* Tamaño fijo para círculo perfecto */
+    height: 30px;
+    line-height: 30px; /* Centra el texto verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 50%; /* Círculo perfecto */
+    margin-left: 8px;
+    display: inline-flex; /* Mejor control de centrado */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#cart-count:hover {
+    background-color: #b89b2f; /* Dorado más oscuro en hover */
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .fa-magnifying-glass {
     margin-top: 4px;
 }
@@ -334,18 +359,21 @@ h1 {
     color: #000;
     cursor: pointer;
   }
+   
+  
   
   @media (max-width: 768px) {
-    .navbar {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 70px;
-      right: 10px;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      z-index: 1000;
+   .navbar {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 40%;
+        padding: 20px;
+        background-color: #fffd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
     }
   
     .navbar.active {
@@ -355,8 +383,15 @@ h1 {
     .menu-toggle {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 100px;
       right: 20px;
+      left: -93%;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #000;
+      cursor: pointer;
+      z-index: 1100;
     }
   }
   
