@@ -19,7 +19,7 @@ header {
     background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0 0 20px 0 #0007;
 }

@@ -20,7 +20,7 @@ header {
     border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0 0 20px 0px #0007;
-
+    width: 100%;
 }
 
 header .logo {
