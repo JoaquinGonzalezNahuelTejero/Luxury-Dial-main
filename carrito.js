@@ -1,4 +1,3 @@
-// Array para almacenar los ítems del carrito
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Lista de productos disponibles
@@ -21,8 +20,8 @@ const products = {
     "Reloj 16": { name: "Platinum Vibrant", price: 120170, image: "imagen/plata.webp" },
     "Reloj 17": { name: "Obsidian Nocturne", price: 48000, image: "imagen/rojo.webp" },
     "Reloj 18": { name: "Emerald Radiant", price: 85000, image: "imagen/verde.webp" },
-    "Reloj 19": { name: "Verdant Gala", price: 175000, image: "imagen/verde2 (1).webp" },
-    "Reloj 20": { name: "Jade Marine", price: 200000, image: "imagen/verde2.webp" },
+    "Reloj 19": { name: "Verdant Gala", price: 175000, image: "imagen/verde2.webp" },
+    "Reloj 20": { name: "Jade Marine", price: 200000, image: "imagen/verde3.webp" },
 };
 
 // Función para mostrar notificación

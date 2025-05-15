@@ -7,11 +7,11 @@ const alertaError =document.querySelector(".alerta-error");
 const alertaExito = document.querySelector(".alerta-exito");
 
 const userNameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
-const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-const passwordRegex = /^.{4,12}$/;
+export const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+export const passwordRegex = /^.{4,12}$/;
 const telRegex = /^(\+54\s?9\s?)?(\d{2})(\d{4})(\d{4})$/;
 
-const estadoValidacionCampos ={
+export const estadoValidacionCampos ={
     userName: false,
     userEmail: false,
     userPassword: false,
@@ -21,7 +21,7 @@ const estadoValidacionCampos ={
 document.addEventListener("DOMContentLoaded", () =>{
     formRegister.addEventListener("submit", e =>{
         e.preventDefault();
-        enviarFormulario()
+        enviarFormulario(formRegister,alertaError,alertaExito)
     });
 
     inputUser.addEventListener("input", () =>{
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     })
 })
 
-function validarCampo(regularExpresion, campo, mensaje){
+export function validarCampo(regularExpresion, campo, mensaje){
     const validarCampo = regularExpresion.test(campo.value);
     if(validarCampo){
         eliminarAlerta(campo.parentElement.parentElement)
@@ -70,21 +70,16 @@ function eliminarAlerta(referencia){
     
 }
 
-function enviarFormulario(){
+export function enviarFormulario(form, alertaError, alertaExito){
     if(estadoValidacionCampos.userName && estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword && estadoValidacionCampos.userTel){
+            
         alertaExito.style.display = "block";
         alertaError.style.display = "none";
-        formRegister.reset();
-        setTimeout(() => {
-            alertaExito.style.display("none");
-        },3000);
+        form.reset();
+
         return;
     }
-
-    alertaError.style.display = "block";
-    alertaExito.style.display = "none";
-    setTimeout(() => {
-        alertaError.style.display("none");
-    },3000);
+        alertaError.style.display = "block";
+        alertaExito.style.display = "none";
 }
 

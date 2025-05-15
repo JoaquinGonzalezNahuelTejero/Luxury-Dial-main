@@ -10,22 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="/imagen/penes solo.png">
-    <title>Luxury Dial Hola mundo</title>
+    <title>Luxury Dial</title>
 </head>
-    <header>
-        <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
-        <h1>Luxury Dial</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li> <!-- Corregido el doble <i> -->
-                <li><a href="/about.html"><i class="fas fa-info-circle"></i>Sobre Nosotros</a></li>
-                <li><a href="#products"><i class="fas fa-clock"></i>Relojes</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i>Contacto</a></li>
-                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li> <!-- Corregido el href duplicado -->
-                <li><a href="/login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i>Iniciar sesion</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
+    <h1>Luxury Dial</h1>
+  
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  
+    <!-- Menú de navegación -->
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+        <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+        <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+    <div id="notifications" class="notifications"></div>
+
     <div class="container-form register">
         <div class="information">
             <div class="info-childs">
@@ -115,6 +124,7 @@
         </div>
     </div>
     <script src="js/script2.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/register.js" typer="module"></script>
+    <script src="js/login_modulo.js" type="module"></script>
 </body>
 </html>

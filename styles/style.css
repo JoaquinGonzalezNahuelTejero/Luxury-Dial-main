@@ -61,6 +61,10 @@ header h1 {
     margin-right: 8px;
 }
 
+.fa-magnifying-glass {
+    margin-top: 4px;
+}
+
 #cart-count {
     background-color: #d4af37;
     color: #fff;
@@ -105,6 +109,54 @@ header h1 {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra inferior para suavizar transición */
 
+}
+
+.more-product {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 420px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente dentro del contenedor */
+    gap: 10px; /* Espacio entre el ícono y el enlace */
+}
+
+.more-products {
+    max-width: 1400px;
+    margin: 120px auto;
+    padding: 0 30px;
+    background: linear-gradient(to bottom, rgba(232, 228, 219, 0), #e8e4db); /* Gradiente sutil para transición */
+}
+
+
+.fa-plus {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    transition: color 0.3s ease;
+    line-height: 1; /* Asegura que el ícono no tenga espacio extra */
+}
+
+.fa-magnifying-glass {
+    margin-top: 5px;
+}
+
+.more-product a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.more-product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -381,16 +433,17 @@ footer {
         display: block;
     }
 
-    .navbar {
+       .navbar {
         display: none;
         position: absolute;
-        top: 100%;
         left: 0;
-        width: 100%;
-        background-color: #fff;
+        width: 35%;
+        background-color: rgba(255, 255, 255, 0.7);
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 2;
     }
+
 
     .navbar.active {
         display: block;

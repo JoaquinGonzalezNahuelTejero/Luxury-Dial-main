@@ -76,6 +76,10 @@ header h1 {
     margin-right: 8px;
 }
 
+.fa-magnifying-glass {
+    margin-top: 4px;
+}
+
 /* Título principal (fuera del login-box) */
 h1 {
     color: #1a1a1a;
@@ -224,7 +228,8 @@ h1 {
     box-shadow: 0 0 5px 0 #0007;
     border-radius: 5px;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 15px;
+    padding: 10px;
 }
 .form .alerta-exito{
     display: block;
@@ -233,7 +238,8 @@ h1 {
     box-shadow: 0 0 5px 0 #0007;
     border-radius: 5px;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 15px;
+    padding: 10px;
 }
 .form .error{
     outline: solid 2px #9d2222;
@@ -243,11 +249,56 @@ h1 {
 .form > .alerta-exito{
     display: none;
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
 /*Responsive*/
+@media (max-width: 770px) {
+ .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 35%;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 11;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+}
+
 @media screen and (max-width:750px){
     html{
         font-size: 12px;
     }
+}
+@media screen and (max-width:655px){
+    
+    html{
+        font-size: 12px;
+    }
+    
 }
 @media screen and (max-width:580px){
     html{
@@ -271,6 +322,41 @@ h1 {
         border-top-right-radius: 0px;
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
-
     }
 }
+
+/* Ocultar navbar por defecto en móviles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      z-index: 1000;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  

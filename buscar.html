@@ -11,11 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .watch-card {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="imagen/penes solo.png" alt="Luxury Dial Logo" class="logo">
         <h1>Luxury Dial</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+        </button>
         <nav class="navbar">
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i>Inicio</a></li>
@@ -29,7 +37,6 @@
         </nav>
     </header>
 
-    <!-- Contenedor para la notificación -->
     <div id="notifications" class="notifications"></div>
 
     <div class="search-bar">
@@ -45,7 +52,7 @@
                 <span id="price-value">Hasta U$S 250,000</span>
             </div>
             <div class="filter-section">
-                <h3>Color</h3>
+                <h3>Tipo de Cara</h3>
                 <label><input type="checkbox" class="checkbox" value="negro"> Negro</label>
                 <label><input type="checkbox" class="checkbox" value="plata"> Plata</label>
                 <label><input type="checkbox" class="checkbox" value="oro"> Oro</label>
@@ -54,132 +61,137 @@
             </div>
         </aside>
     
-        <section class="watch-grid">
-            <div class="watch-card" data-price="55120" data-color="azul">
+        <section class="watch-grid" id="watch-grid">
+            <div class="watch-card" data-price="55120" data-color="azul" data-id="1" onclick="goToProductPage(1)">
                 <img src="imagen/azul-claro.webp" alt="Aqua Eternal">
                 <h3>Aqua Eternal</h3>
                 <p>U$S 55,120</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 1')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 1')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="82300" data-color="azul">
+            <div class="watch-card" data-price="82300" data-color="azul" data-id="2" onclick="goToProductPage(2)">
                 <img src="imagen/azul-marino.webp" alt="Celestial Vanguard">
                 <h3>Celestial Vanguard</h3>
                 <p>U$S 82,300</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 2')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 2')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="120450" data-color="azul">
+            <div class="watch-card" data-price="120450" data-color="azul" data-id="3" onclick="goToProductPage(3)">
                 <img src="imagen/azul-oscuro.webp" alt="Marine Sovereign">
                 <h3>Marine Sovereign</h3>
                 <p>U$S 120,450</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 3')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 3')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="65600" data-color="azul">
+            <div class="watch-card" data-price="65600" data-color="azul" data-id="4" onclick="goToProductPage(4)">
                 <img src="imagen/azul-verde.webp" alt="Turquoise Dynamic">
                 <h3>Turquoise Dynamic</h3>
                 <p>U$S 65,600</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 4')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 4')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="28350" data-color="azul">
+            <div class="watch-card" data-price="28350" data-color="azul" data-id="5" onclick="goToProductPage(5)">
                 <img src="imagen/azul.aquamarino.webp" alt="Azure Serene">
                 <h3>Azure Serene</h3>
                 <p>U$S 28,350</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 5')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 5')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="32870" data-color="azul">
+            <div class="watch-card" data-price="32870" data-color="azul" data-id="6" onclick="goToProductPage(6)">
                 <img src="imagen/azul.webp" alt="Indigo Regal">
                 <h3>Indigo Regal</h3>
                 <p>U$S 32,870</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 6')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 6')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="40250" data-color="negro">
+            <div class="watch-card" data-price="40250" data-color="negro" data-id="7" onclick="goToProductPage(7)">
                 <img src="imagen/batmanpng.webp" alt="Onyx Imperial">
                 <h3>Onyx Imperial</h3>
                 <p>U$S 40,250</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 7')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 7')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="21330" data-color="plata">
+            <div class="watch-card" data-price="21330" data-color="plata" data-id="8" onclick="goToProductPage(8)">
                 <img src="imagen/blanco.webp" alt="Pearl Urban">
                 <h3>Pearl Urban</h3>
                 <p>U$S 21,330</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 8')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 8')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="233470" data-color="plata">
+            <div class="watch-card" data-price="233470" data-color="plata" data-id="9" onclick="goToProductPage(9)">
                 <img src="imagen/diamantes.webp" alt="Diamond Pure">
                 <h3>Diamond Pure</h3>
                 <p>U$S 233,470</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 9')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 9')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="110710" data-color="oro">
+            <div class="watch-card" data-price="110710" data-color="oro" data-id="10" onclick="goToProductPage(10)">
                 <img src="imagen/dorado-clasico.webp" alt="Aureum Minimal">
                 <h3>Aureum Minimal</h3>
                 <p>U$S 110,710</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 10')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 10')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="250000" data-color="oro">
+            <div class="watch-card" data-price="250000" data-color="oro" data-id="11" onclick="goToProductPage(11)">
                 <img src="imagen/dorado.webp" alt="Golden Celestial">
                 <h3>Golden Celestial</h3>
                 <p>U$S 250,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 11')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 11')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="165000" data-color="oro">
+            <div class="watch-card" data-price="165000" data-color="oro" data-id="12" onclick="goToProductPage(12)">
                 <img src="imagen/dorado2.webp" alt="Aurum Nautical">
                 <h3>Aurum Nautical</h3>
                 <p>U$S 165,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 12')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 12')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="135000" data-color="oro">
+            <div class="watch-card" data-price="135000" data-color="oro" data-id="13" onclick="goToProductPage(13)">
                 <img src="imagen/dorado3.webp" alt="Golden Essence">
                 <h3>Golden Essence</h3>
                 <p>U$S 135,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 13')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 13')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="13500" data-color="negro">
+            <div class="watch-card" data-price="13500" data-color="negro" data-id="14" onclick="goToProductPage(14)">
                 <img src="imagen/negro.webp" alt="Ebony Silver">
                 <h3>Ebony Silver</h3>
                 <p>U$S 13,500</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 14')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 14')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="210860" data-color="negro">
+            <div class="watch-card" data-price="210860" data-color="negro" data-id="15" onclick="goToProductPage(15)">
                 <img src="imagen/negro2.webp" alt="Shadow Exclusive">
                 <h3>Shadow Exclusive</h3>
                 <p>U$S 210,860</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 15')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 15')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="120170" data-color="plata">
+            <div class="watch-card" data-price="120170" data-color="plata" data-id="16" onclick="goToProductPage(16)">
                 <img src="imagen/plata.webp" alt="Platinum Vibrant">
                 <h3>Platinum Vibrant</h3>
                 <p>U$S 120,170</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 16')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 16')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="48000" data-color="negro">
+            <div class="watch-card" data-price="48000" data-color="negro" data-id="17" onclick="goToProductPage(17)">
                 <img src="imagen/rojo.webp" alt="Obsidian Nocturne">
                 <h3>Obsidian Nocturne</h3>
                 <p>U$S 48,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 17')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 17')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="85000" data-color="verde">
+            <div class="watch-card" data-price="85000" data-color="verde" data-id="18" onclick="goToProductPage(18)">
                 <img src="imagen/verde.webp" alt="Emerald Radiant">
                 <h3>Emerald Radiant</h3>
                 <p>U$S 85,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 18')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 18')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="175000" data-color="verde">
-                <img src="imagen/verde2 (1).webp" alt="Verdant Gala">
+            <div class="watch-card" data-price="175000" data-color="verde" data-id="19" onclick="goToProductPage(19)">
+                <img src="imagen/verde2.webp" alt="Verdant Gala">
                 <h3>Verdant Gala</h3>
                 <p>U$S 175,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 19')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 19')">Añadir al carrito</button>
             </div>
-            <div class="watch-card" data-price="100000" data-color="verde">
-                <img src="imagen/verde2.webp" alt="Jade Marine">
+            <div class="watch-card" data-price="100000" data-color="verde" data-id="20" onclick="goToProductPage(20)">
+                <img src="imagen/verde3.webp" alt="Jade Marine">
                 <h3>Jade Marine</h3>
                 <p>U$S 100,000</p>
-                <button class="agregarAlCarrito" onclick="agregarAlCarrito('Reloj 20')">Añadir al carrito</button>
+                <button class="agregarAlCarrito" onclick="event.stopPropagation(); agregarAlCarrito('Reloj 20')">Añadir al carrito</button>
             </div>
         </section>
     </main>
+
     <script src="script.js"></script>
     <script src="buscador.js"></script>
     <script src="carrito.js"></script>
-    <script src="db/ecomers.db"></script>
+    <script>
+        function goToProductPage(id) {
+            window.location.href = `product.html?id=${id}`;
+        }
+    </script>
 </body>
 </html>
