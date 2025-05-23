@@ -116,7 +116,6 @@ header h1 {
     color: #1a1a1a;
     cursor: pointer;
 }
-
 /* Hero */
 .hero {
     position: relative;
@@ -127,15 +126,18 @@ header h1 {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra inferior para suavizar transición */
 }
-
-
 .search-bar {
-    margin-top: 10rem;
-    max-width: 600px;
+    max-width: 880px;
     border: none;
     border-radius: 25px;
-    box-shadow: 0 0 8px 2px rgba(64, 64, 64, 0.3); /* Blurred gray border effect */
+    box-shadow: 0 0 10px 0 #0003; /* Blurred gray border effect */
     transition: box-shadow 0.3s ease;
+    place-content: center;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    margin-left: 680px;
 }
 
 .search-bar:hover {
@@ -167,8 +169,10 @@ header h1 {
 main {
     display: flex;
     max-width: 1200px;
-    margin: 20rem auto;
+    margin: auto;
     gap: 2rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .filters {

@@ -19,16 +19,15 @@ body{
 }
 /* Header */
 header {
+    position: fixed;
     background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: none;
     width: 100%;
-    position: flex;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    z-index: 5;
 }
 
 /* Ajustamos el margen superior del contenido para evitar solapamiento con el header fijo */
