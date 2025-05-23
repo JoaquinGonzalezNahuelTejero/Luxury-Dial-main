@@ -70,16 +70,31 @@ function eliminarAlerta(referencia){
     
 }
 
-export function enviarFormulario(form, alertaError, alertaExito){
-    if(estadoValidacionCampos.userName && estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword && estadoValidacionCampos.userTel){
-            
+export function enviarFormulario(form, alertaError, alertaExito) {
+    if (
+        estadoValidacionCampos.userName &&
+        estadoValidacionCampos.userEmail &&
+        estadoValidacionCampos.userPassword &&
+        estadoValidacionCampos.userTel
+    ) {
         alertaExito.style.display = "block";
         alertaError.style.display = "none";
         form.reset();
 
+        // Ocultar la alerta de éxito después de 2 segundos
+        setTimeout(() => {
+            alertaExito.style.display = "none";
+        }, 2000);
+
         return;
     }
-        alertaError.style.display = "block";
-        alertaExito.style.display = "none";
+
+    alertaError.style.display = "block";
+    alertaExito.style.display = "none";
+
+    // Ocultar la alerta de error después de 2 segundos
+    setTimeout(() => {
+        alertaError.style.display = "none";
+    }, 2000);
 }
 

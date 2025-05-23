@@ -14,13 +14,26 @@ body {
 
 /* Header */
 header {
+    position: fixed;
     background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
     border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 0 20px 0px #0007;
+    box-shadow: none;
     width: 100%;
+    z-index: 5;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 20px;
+
 }
 
 header .logo {
@@ -34,6 +47,10 @@ header h1 {
     margin-top: 6px;
     margin-bottom: 15px;
     font-size: 24px;
+}
+.navbar {
+    width: 100%;
+
 }
 
 .navbar ul {
@@ -102,14 +119,12 @@ header h1 {
 /* Hero */
 .hero {
     position: relative;
-    background: url('imagen/reloj-fondo.jpg') no-repeat center/cover;
-    padding: 180px 20px;
+    padding: 310px 20px;
     text-align: center;
     color: #fff;
     background-color: #222; /* Fondo oscuro como fallback */
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra inferior para suavizar transición */
-
 }
 
 .more-product {
@@ -134,7 +149,6 @@ header h1 {
     padding: 0 30px;
     background: linear-gradient(to bottom, rgba(232, 228, 219, 0), #e8e4db); /* Gradiente sutil para transición */
 }
-
 
 .fa-plus {
     color: rgb(0, 0, 0);
@@ -434,7 +448,7 @@ footer {
         display: block;
     }
 
-       .navbar {
+    .navbar {
         display: none;
         position: absolute;
         left: 0;
@@ -460,6 +474,9 @@ footer {
 
     .hero {
         padding: 140px 20px;
+    }
+    .hero-content{
+        margin-top: 60px;
     }
 
     .hero h2 {
@@ -496,8 +513,9 @@ footer {
         gap: 15px;
         padding: 15px 20px;
     }
+    
 }
-@media (max-width:420px){
+@media (max-width:470px){
     .navbar{
         display: none;
         position: absolute;
@@ -510,4 +528,31 @@ footer {
         border: 3px solid #b89b2f;
         margin-top: 4px;
     }
+    .hero h2{
+        font-size: 30px;
+    }
+    .hero p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 432px){
+    .navbar{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fffd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        border: 3px solid #b89b2f;
+        margin-top: 4px;
+    }
+    .hero h2{
+        font-size: 25px;
+    }
+    .hero p{
+        font-size: 16px;
+    }
+    
 }

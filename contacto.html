@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/style4.css">
+    <link rel="stylesheet" href="styles/style8.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&family=Cinzel&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="imagen/penes solo.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Sobre Nosotros - Luxury Dial</title>
+    <title>Contacto - Luxury Dial</title>
 </head>
 <body>
     <header>
@@ -25,45 +25,57 @@
         <nav class="navbar">
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                <li><a href="/about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
                 <li><a href="/buscar.html"><i class="fas fa-clock"></i> Relojes</a></li>
                 <li><a href="/contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
-                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-count">0</span></a></li>
+                <li><a href="/carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-count">0</span></a></li>
                 <li><a href="login.html" onclick="toggleLogin()"><i class="fas fa-user-plus"></i> Registrarse</a></li>
                 <li><a href="/buscar.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
         </nav>
     </header>
-    <section class="about-content">
-      
-  <div class="main-info">
-    <h2>Sobre Nosotros</h2>
-    <div class="sobre-nosotros-texto">
-      <div></div>
-      <p>
-        <strong>"</strong>Luxury Dial es el reflejo de una pasión compartida por la elegancia, la precisión y el arte del tiempo.<strong>"</strong>
-        Somos siete amigos, unidos por lazos de amistad y una visión en común: dar vida a una boutique que eleve
-        el concepto de lujo a través de cada detalle.
-      </p>
-      <p>
-        Impulsados por nuestra admiración hacia los relojes de alta gama, fundamos Luxury Dial con la misión de ofrecer
-        piezas exclusivas que combinan diseño, sofisticación y artesanía. Cada reloj en nuestra colección es cuidadosamente
-        seleccionado para quienes valoran la excelencia en cada segundo.
-      </p>
-      <p>
-        Nuestro compromiso va más allá de vender relojes; queremos brindarte una experiencia única. Desde el primer clic
-        hasta que tu reloj llegue a tus manos, cuidamos cada paso con dedicación y elegancia, ofreciéndote un servicio
-        personalizado y a la altura del lujo que representamos.
-      </p>
-      <p>
-        Gracias por ser parte de esta historia. En Luxury Dial, el tiempo es más que minutos: es estilo, legado y perfección.
-      </p>
+<main>
+<section>
+  <article>
+    <div class="more-contect">
+      <div class="info-contect">
+        
+      </div>
     </div>
-  </div>
+  </article>
 </section>
-    <footer>
+</main> 
+<aside>
+  <div class="formulario">
+    <form action="https://formsubmit.co/joaquindevige25@gmail.com " method="POST" id="formulario">
+
+      <h2>Formulario de contacto</h2>
+
+      <div class="input-group">
+
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Nombre">
+
+        <label for="phone">Teléfono</label>
+        <input type="text" name="phone" id="phone" placeholder="Telefono">
+
+         <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Email">
+
+        <label for="message">Mensaje</label>
+        <textarea name="message" id="message" placeholder="Mensaje" cols="30" rows="5"></textarea>
+
+        <button type="submit" class="btn" value="enviar">Enviar</button>
+
+      </div>
+    </form>
+  </div>
+</aside>
+
+<footer>
         <p>© 2025 Luxury Dial. Todos los derechos reservados.</p>
     </footer>
+    <script src="contact.js"></script>
     <script src="script.js"></script>
     <script src="carrito.js"></script>
     <script src="db/ecomers.db"></script>

@@ -1,9 +1,7 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body{ 
@@ -56,6 +54,7 @@ header h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin: 10px;
 }
 
 .navbar a {
@@ -286,7 +285,7 @@ h1 {
 
 /*Responsive*/
 @media (max-width: 770px) {
- .menu-toggle {
+    .menu-toggle {
         display: block;
     }
 
@@ -348,17 +347,18 @@ h1 {
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
     }
-}
-
-/* Ocultar navbar por defecto en móviles */
-.menu-toggle {
+    .menu-toggle {
     display: none;
     font-size: 24px;
     background: none;
     border: none;
     color: #000;
     cursor: pointer;
-  }
+    }
+}
+
+/* Ocultar navbar por defecto en móviles */
+
    
   
   

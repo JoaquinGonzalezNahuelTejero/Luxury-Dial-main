@@ -1,4 +1,4 @@
-/* Reset y configuración base */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +7,33 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f1ea; /* Tono crema más suave, alineado con about.html */
+    background-color: #e8e4db; /* Tono crema más oscuro para suavizar la transición */
     color: #333;
     line-height: 1.5;
 }
 
 /* Header */
 header {
+    position: static;
     background: linear-gradient(360deg, #fff, #eee, #ddd);
     text-align: center;
     padding: 5px;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 0 20px 0 #0007;
+    box-shadow: none;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    top:0px;
+}
+
+.header-container {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto; 
+    padding: 0 20px;
 }
 
 header .logo {
@@ -33,6 +47,11 @@ header h1 {
     margin-top: 6px;
     margin-bottom: 15px;
     font-size: 24px;
+}
+
+.navbar {
+    width: 100%;
+    
 }
 
 .navbar ul {
@@ -61,6 +80,10 @@ header h1 {
     margin-right: 8px;
 }
 
+.fa-magnifying-glass {
+    margin-top: 4px;
+}
+
 #cart-count {
     background-color: #d4af37;
     color: #fff;
@@ -85,15 +108,34 @@ header h1 {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Barra de búsqueda */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    padding: 310px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #222; /* Fondo oscuro como fallback */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra inferior para suavizar transición */
+}
+
+
 .search-bar {
-    margin: 1rem auto;
+    margin-top: 10rem;
     max-width: 600px;
     border: none;
     border-radius: 25px;
     box-shadow: 0 0 8px 2px rgba(64, 64, 64, 0.3); /* Blurred gray border effect */
     transition: box-shadow 0.3s ease;
-    position: relative; /* Ensure proper layering */
 }
 
 .search-bar:hover {
@@ -125,7 +167,7 @@ header h1 {
 main {
     display: flex;
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 20rem auto;
     gap: 2rem;
 }
 
